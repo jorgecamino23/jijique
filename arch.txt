@@ -1,0 +1,26 @@
+###################
+## After Install ##
+###################
+
+sudo pacman -Syyuu
+sudo pacman -S hyprland hyprlock kitty nano git base-devel 
+
+#################
+## Yay Install ##
+#################
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+###################
+## Miscellaneous ##
+###################
+
+sudo pacman -S hyprpaper zsh rofi waybar swaync sddm qt5 qt5-quickcontrols2 qt5-svg
+yay -Sy brave-bin xdg-user-dirs visual-studio-code-bin nwg-look ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji pavucontrol vlc blueman networkmanager nm-connection-editor brightnessctl gruvbox-dark-gtk ristretto papirus-icon-theme papirus-folders 
+xdg-user-dirs-update
+chsh -s /bin/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+papirus-folders -C black
